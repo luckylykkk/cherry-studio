@@ -1297,6 +1297,7 @@
     "backup": {
       "file_format": "Le format du fichier de sauvegarde est incorrect"
     },
+    "base64DataTruncated": "[to be translated]:Base64 image data truncated, size",
     "boundary": {
       "default": {
         "devtools": "Ouvrir le panneau de débogage",
@@ -1377,6 +1378,8 @@
     "text": "texte",
     "toolInput": "entrée de l'outil",
     "toolName": "Nom de l'outil",
+    "truncated": "[to be translated]:Data truncated, original size",
+    "truncatedBadge": "[to be translated]:Truncated",
     "unknown": "Неизвестная ошибка",
     "usage": "Quantité",
     "user_message_not_found": "Impossible de trouver le message d'utilisateur original",
@@ -1808,6 +1811,50 @@
     },
     "citation": "{{count}} éléments cités",
     "citations": "Citations",
+    "committee": {
+      "aggregate": "[to be translated]:Street Cred",
+      "aggregate_desc": "[to be translated]:Aggregated peer rankings (lower is better)",
+      "appended": "[to be translated]:Chairman result appended to chat",
+      "chairman": "[to be translated]:Chairman model",
+      "chairman_placeholder": "[to be translated]:Select chairman model",
+      "elapsed": "[to be translated]:Elapsed {{time}}",
+      "elapsed_running": "[to be translated]:Running · {{time}} elapsed",
+      "empty": {
+        "stage1": "[to be translated]:No available multi-model responses",
+        "stage2": "[to be translated]:No peer rankings generated yet",
+        "stage3": "[to be translated]:No chairman answer generated yet"
+      },
+      "error": "[to be translated]:LLM council failed",
+      "label": "[to be translated]:LLM Council",
+      "parsed": "[to be translated]:Parsed ranking",
+      "rerun": "[to be translated]:Rerun council",
+      "run": "[to be translated]:Run council",
+      "scorecard": {
+        "accuracy": "[to be translated]:Accuracy",
+        "actionability": "[to be translated]:Actionability",
+        "coverage": "[to be translated]:Coverage",
+        "grounding": "[to be translated]:Grounding",
+        "hallucination": "[to be translated]:Hallucination Risk",
+        "reasoning": "[to be translated]:Reasoning",
+        "response": "[to be translated]:Response",
+        "title": "[to be translated]:Scorecard"
+      },
+      "stage1": "[to be translated]:Stage 1: Independent responses",
+      "stage2": "[to be translated]:Stage 2: Peer rankings",
+      "stage3": "[to be translated]:Stage 3: Chairman synthesis",
+      "stage3_retry": "[to be translated]:Retry chairman synthesis",
+      "status": {
+        "complete": "[to be translated]:Complete",
+        "stage2": "[to be translated]:Stage2 running",
+        "stage3": "[to be translated]:Stage3 running"
+      },
+      "title": "[to be translated]:LLM Council",
+      "warning": {
+        "need_multi_models": "[to be translated]:Select at least two models to enable the LLM council",
+        "no_question": "[to be translated]:No matching user question found",
+        "no_responses": "[to be translated]:No available multi-model responses"
+      }
+    },
     "copied": "Copié",
     "copy": {
       "failed": "La copie a échoué",

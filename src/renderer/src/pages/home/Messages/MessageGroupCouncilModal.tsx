@@ -332,9 +332,9 @@ const MessageGroupCouncilModal: FC<Props> = ({ open, onClose, messages, topic, a
       const committeeMessage = createAssistantMessage(assistantId, topic.id, {
         askId,
         model,
-        modelId: model.id,
-        status: AssistantMessageStatus.SUCCESS
+        modelId: model.id
       })
+      committeeMessage.status = AssistantMessageStatus.SUCCESS
       committeeMessage.type = 'committee'
 
       const textBlock = createMainTextBlock(committeeMessage.id, content, {
@@ -344,7 +344,7 @@ const MessageGroupCouncilModal: FC<Props> = ({ open, onClose, messages, topic, a
 
       dispatch(upsertOneBlock(textBlock))
       dispatch(newMessagesActions.addMessage({ topicId: topic.id, message: committeeMessage }))
-      await saveMessageAndBlocksToDB(committeeMessage, [textBlock])
+      await saveMessageAndBlocksToDB(topic.id, committeeMessage, [textBlock])
       setAppendedMessageId(committeeMessage.id)
       window.toast.success(t('message.committee.appended'))
     },
@@ -614,13 +614,7 @@ const MessageGroupCouncilModal: FC<Props> = ({ open, onClose, messages, topic, a
   }, [running, stage2Results.length, stage3Result])
 
   return (
-    <Modal
-      title={t('message.committee.title')}
-      open={open}
-      onCancel={onClose}
-      footer={null}
-      width={860}
-      centered>
+    <Modal title={t('message.committee.title')} open={open} onCancel={onClose} footer={null} width={860} centered>
       <Space direction="vertical" size="middle" style={{ width: '100%' }}>
         <Space align="center" wrap style={{ justifyContent: 'space-between', width: '100%' }}>
           <Space align="center" wrap>

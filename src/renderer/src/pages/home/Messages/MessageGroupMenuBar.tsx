@@ -21,8 +21,8 @@ import { memo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
-import MessageGroupModelList from './MessageGroupModelList'
 import MessageGroupCouncilModal from './MessageGroupCouncilModal'
+import MessageGroupModelList from './MessageGroupModelList'
 import MessageGroupSettings from './MessageGroupSettings'
 
 interface Props {

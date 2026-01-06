@@ -54,9 +54,7 @@ const llmCommitteeTool = defineTool({
       return assistant.topics.find((item) => item.id === currentTopicId)
     }, [activeTopic, assistant.topics, currentTopicId])
 
-    const messages = useAppSelector((state) =>
-      resolvedTopic ? selectMessagesForTopic(state, resolvedTopic.id) : []
-    )
+    const messages = useAppSelector((state) => (resolvedTopic ? selectMessagesForTopic(state, resolvedTopic.id) : []))
 
     const [isOpen, setIsOpen] = useState(false)
     const [activeGroup, setActiveGroup] = useState<GroupInfo | null>(null)
